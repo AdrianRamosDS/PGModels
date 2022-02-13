@@ -41,12 +41,14 @@ def plot_top_words(model, feature_names, n_top_words, title):
     plt.subplots_adjust(top=0.90, bottom=0.05, wspace=0.90, hspace=0.3)
     plt.show()
 
+
 #%% DATA RETRIEVAL
 print("Loading dataset...")
 t0 = time()
 #data, _ = fetch_20newsgroups(shuffle=True, random_state=1, remove= ('headers', 'footers', 'quotes'), return_X_y=True)
 data = pd.read_csv('ag_news.csv')
 print("done in %0.3fs." % (time() - t0))
+
 
 
 #%% TEXT VECTORIZATION
